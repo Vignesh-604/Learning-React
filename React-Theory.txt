@@ -1,0 +1,79 @@
+React: Easy to build and manage complex frontends
+Created to fix the Phantom Message problem (at facebook)
+-- Library
+
+*** Creating a react project --- Ctrl + c to stop a project ***
+
+npx create-react-app : creates a react app folder with all dependencies (bulky, time consuming)
+npm run start : starts the react app on local machine
+npm run build : creates a build folder with static temp folders (used in production)
+App running on port 3000 --> http://localhost:3000
+
+Deleting unwanted files:
+setupTest.js
+reportWebVitals.js
+logo.svg --> the react logo
+index.css --> css file for your project
+App.css
+App.test.js
+
+Remove all import statements to respective files
+
+
+*** Using Vite to create a React app: ***
+
+npm create vite@latest       # download latest Library
+-- enter project name --
+-- select framework/library --
+-- selectvariant (language) --
+cd app-name
+npm install         # download dependencies like node modules folder
+
+npm run dev         # Run vite react app
+App running on port 5137 : http://localhost:5173/
+
+Deleting unwanted files:
+assets folder --> contains logo
+App.css
+index.css
+remove all import statements from App.jsx
+
+<button onClick={() => setCount((count) => count + 1)}>
+    count is {count}
+</button>
+const [count, setCount] = useState(0)
+
+
+*** Understanding file system: ***
+
+node_modules : Contains all dependencies mentioned in package.json
+
+.gitignore : Mentions which files to ignore while pushing to github
+
+public/manifest.json : provides metadata used when your web app is installed on a user's mobile device or desktop.
+
+index.html :
+-- File which opens in browser. 
+-- Single page application (SPA)
+-- Javascript injects code into this (DOM manipulation)
+
+src/index.js :
+--  Contains import statements for React core library and Web library
+-- Creates a virtual DOM to manipulate a tag in index.html
+-- Imports code from App.js
+
+src/App.js : JS file that returns a function containing HTML code
+
+// index.html, index.js and App.js are connected via react-scripts mentioned in package.json
+
+Similar in vite as well - Although vite only accepts jsx files to store components but create-react-app can have both js/jsx
+
+*** Component files: ***
+-- Files containing components like App.jsx (js) file must have their function name first letter capital
+
+Problem with component files: can only return one component or tag
+So no 2 tags (or custom tags be in same fucntion)
+To fix this, enclose the rest of the components in div tag or empty tag
+-- empty tag is called a fragment <> </>
+
+JSX = JS + HTML
