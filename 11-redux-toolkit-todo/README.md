@@ -10,15 +10,15 @@ Todo application using Redux and redux toolkit for state management.
 - `npm install @reduxjs/toolkit` & `npm install react-redux`
 
 ## File system 📁
-**store.js** : configures a Redux store to manage the application state, using a specified reducer.  
-**todoSlice.js** : defines the state and logic for managing todo items, including actions and reducers.  
+- **store.js** : configures a Redux store to manage the application state, using a specified reducer.  
+- **todoSlice.js** : defines the state and logic for managing todo items, including actions and reducers.  
 
 > [!NOTE]   
 >  Basically,**store.js** creates the _storage room_ (Redux store), and **todoSlice.js** defines how todo items are _managed within it_. So, whenever you want to add, remove, or update a todo item, you interact with the todos managed by **todoSlice.js**, which in turn updates the overall storage managed by **store.js**.
 
-**AddTodo.jsx** : Component that adds new todos.   
-**Todos.jsx** : Component that iterates over the stored todos to list them.   
-**main.jsx** : Wraps the main component in Providr wrapper that provides the states tored in state
+- **AddTodo.jsx** : Component that adds new todos.   
+- **Todos.jsx** : Component that iterates over the stored todos to list them.   
+- **main.jsx** : Wraps the main component in Providr wrapper that provides the states tored in state
 
 ## Flow 📈
 **store.js** is used to create a Redux store object and **todoSlice.jsx** is used to create a slice, an object that contains name of the slice, the initial state and reducers that define changes in state. Also it mentions the actions that are used to interact with the store.  

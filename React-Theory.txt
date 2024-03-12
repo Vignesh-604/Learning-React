@@ -38,12 +38,6 @@ App.css
 index.css
 remove all import statements from App.jsx
 
-<button onClick={() => setCount((count) => count + 1)}>
-    count is {count}
-</button>
-const [count, setCount] = useState(0)
-
-
 *** Understanding file system: ***
 
 node_modules : Contains all dependencies mentioned in package.json
@@ -77,3 +71,39 @@ To fix this, enclose the rest of the components in div tag or empty tag
 -- empty tag is called a fragment <> </>
 
 JSX = JS + HTML
+
+*** Virtual DOM ***
+ReactDOM.createRoot() : creates a virtual DOM - a DOM similar to that of normal DOM but keeps of track of changes and updates it instead of reloading the whole page
+The algorithm behind this is called as reconcilliation. It compares the DOM and React DOM after changes (from setState) and updates the new changes instead of whole DOM
+Fibre is the new ground-up version of reconciller.
+
+Add tailwind by following guidelines at https://tailwindcss.com/docs/installation/framework-guides
+
+
+** Script to make vite react project with tailwind **
+npm create vite@latest my-project -- --template react
+cd my-project
+
+npm install -D tailwindcss postcss autoprefixer
+npx tailwindcss init -p
+
+// in tailwind.config.js
+  content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+  ],
+
+// in index.css
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+*** React Router ***
+React Router enables "client side routing".
+Client side routing allows your app to update the URL from a link click without making another request for another document from the server. 
+Basically, it enables SPA (Single page application) by loading different page components in a single URL by updating the DOM.
+
+*** Redux Toolkit ***
+npm install @reduxjs/toolkit
+npm install react-redux
