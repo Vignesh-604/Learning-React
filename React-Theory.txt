@@ -100,6 +100,7 @@ npx tailwindcss init -p
 
 
 *** React Router ***
+npm install react-router-dom
 React Router enables "client side routing".
 Client side routing allows your app to update the URL from a link click without making another request for another document from the server. 
 Basically, it enables SPA (Single page application) by loading different page components in a single URL by updating the DOM.
@@ -107,3 +108,6 @@ Basically, it enables SPA (Single page application) by loading different page co
 *** Redux Toolkit ***
 npm install @reduxjs/toolkit
 npm install react-redux
+
+*** Blog Project Req ***
+Redux Toolkit, react-router-dom, appwrite, @tinymce/tinymce-react, html-react-parser, react-hook-form
