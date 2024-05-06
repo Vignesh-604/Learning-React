@@ -110,4 +110,4 @@ npm install @reduxjs/toolkit
 npm install react-redux
 
 *** Blog Project Req ***
-Redux Toolkit, react-router-dom, appwrite, @tinymce/tinymce-react, html-react-parser, react-hook-form
+npm i @reduxjs/toolkit react-redux react-router-dom appwrite @tinymce/tinymce-react html-react-parser react-hook-form

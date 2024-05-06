@@ -14,26 +14,26 @@ function Header() {
       slug: "/",
       active: true
     }, 
-//     {
-//       name: "Login",
-//       slug: "/login",
-//       active: !authStatus,
-//   },
-//   {
-//       name: "Signup",
-//       slug: "/signup",
-//       active: !authStatus,
-//   },
-//   {
-//       name: "All Posts",
-//       slug: "/all-posts",
-//       active: authStatus,
-//   },
-//   {
-//       name: "Add Post",
-//       slug: "/add-post",
-//       active: authStatus,
-//   },
+    {
+      name: "Login",
+      slug: "/login",
+      active: !authStatus,
+  },
+  {
+      name: "Signup",
+      slug: "/signup",
+      active: !authStatus,
+  },
+  {
+      name: "All Posts",
+      slug: "/all-posts",
+      active: authStatus,
+  },
+  {
+      name: "Add Post",
+      slug: "/add-post",
+      active: authStatus,
+  },
   ]
 
 
@@ -47,7 +47,7 @@ function Header() {
                 </Link>
             </div>
             <ul className='flex ml-auto'> 
-                {navItems.map((item)=>{
+                {navItems.map((item)=>(
                     item.active ? (
                         <li key={item.name}>
                             <button 
@@ -58,7 +58,7 @@ function Header() {
                             </button>
                         </li>
                     ) : null
-                })}
+                ))}
 
                 {authStatus && (                // React code: If left of && is true then right side will be displayed
                     <li><Logout /></li>

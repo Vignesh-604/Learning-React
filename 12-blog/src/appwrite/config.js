@@ -1,6 +1,12 @@
 import conf from "../conf/conf";
 import { Client, ID, Databases, Storage, Query } from "appwrite";
 
+const client = new Client()
+    .setEndpoint('https://cloud.appwrite.io/v1')
+    .setProject(conf.appwriteProjectId);
+
+const databases = new Databases(client);
+const bucket = new Storage()
 export class Service{
     client = new Client()
     databases
@@ -76,7 +82,7 @@ export class Service{
             return await this.databases.listDocuments(
                 conf.appwriteDatabaseId,
                 conf.appwriteCollectionId,
-                [Query.equal(["status", "true"])]               // query
+                // [Query.equal(["status", "true"])]               // query
             )
         } catch (error) {
             console.log(error);
