@@ -10,7 +10,7 @@ function CallbackComponent({heavy}){
     useEffect(() => {setNumber(heavy)},[heavy])
     return (
         <div>
-            <h1>{number}</h1>
+            <h1 className='text-6xl'>{number}</h1>
         </div>
     )
 }
@@ -30,23 +30,30 @@ function UseCallback() {
         <div>
             <h1 className=' text-7xl mb-12'><b><u>useCallback Hook</u></b></h1>
 
-            <h1 className='text-6xl'>Counter: {count}</h1>
-            <button 
-            onClick={()=>setCount(++count)}
-            className='bg-gray-600 p-3 m-2 rounded-lg text-2xl'
-            >Increment</button>
+            <div className='flex justify-center'>
+                <button 
+                onClick={()=>setCount(++count)}
+                className='bg-gray-600 p-3 m-2 rounded-lg text-2xl'
+                >Increment</button>
 
-            <button 
-            onClick={()=>setCount(--count)}
-            className='bg-gray-600 p-3 m-2 rounded-lg text-2xl'
-            >Decrement</button>
+                <h1 className='text-6xl mx-2'>Counter: {count}</h1>
 
-            <button 
-            onClick={() => setNumber(++number)}
-            className='bg-gray-600 p-3 m-2 rounded-lg text-2xl'
-            >Heavy</button>
+                <button 
+                onClick={()=>setCount(--count)}
+                className='bg-gray-600 p-3 m-2 rounded-lg text-2xl'
+                >Decrement</button>
+            </div>
 
-            <CallbackComponent heavy={heavy}/>
+            <hr className='my-3'/>
+
+            <div className='flex justify-center'>
+                <button 
+                onClick={() => setNumber(++number)}
+                className='bg-gray-600 p-3 m-2 rounded-lg text-2xl'
+                >Heavy</button>
+
+                <CallbackComponent heavy={heavy}/>
+            </div>
         </div>
     );
 }
